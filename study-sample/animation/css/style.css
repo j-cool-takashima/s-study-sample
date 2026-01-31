@@ -1,0 +1,297 @@
+@charset "UTF-8";
+
+/*
+  リセットCSS（最小限）
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+ol {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  font-family: "Hiragino Sans", "Noto Sans JP", "Yu Gothic", "Meiryo", sans-serif;
+  color: #2b2b2b;
+  background-color: #f7f7f5;
+  line-height: 1.7;
+}
+
+/*
+  block: page
+  全体の背景と余白
+*/
+.page {
+  overflow-x: hidden;
+}
+
+/*
+  block: header
+  ページの導入部分
+*/
+.header {
+  padding: 88px 24px 72px;
+  background-color: #ffffff;
+}
+
+.header__inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.header__label {
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  color: #5f6b7a;
+  margin-bottom: 12px;
+}
+
+.header__title {
+  font-size: clamp(1.9rem, 4vw, 2.7rem);
+  margin-bottom: 16px;
+}
+
+.header__text {
+  color: #4f5560;
+}
+
+/*
+  block: intro
+  学習意図を含めた説明
+*/
+.intro {
+  padding: 64px 24px;
+  background-color: #f0f2f4;
+}
+
+.intro__inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.intro__title {
+  font-size: 1.6rem;
+  margin-bottom: 16px;
+  color: #2f3a45;
+}
+
+.intro__text {
+  color: #4f5560;
+}
+
+/*
+  block: feature
+  サービス特徴
+*/
+.feature {
+  padding: 72px 24px;
+  background-color: #ffffff;
+}
+
+.feature__inner {
+  max-width: 1040px;
+  margin: 0 auto;
+  display: grid;
+  gap: 32px;
+}
+
+.feature__header {
+  display: grid;
+  gap: 12px;
+}
+
+.feature__title {
+  font-size: 1.6rem;
+  color: #2f3a45;
+}
+
+.feature__text {
+  color: #4f5560;
+}
+
+.feature__list {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+/*
+  block: feature-card
+  特徴カード
+*/
+.feature-card {
+  background-color: #f7f7f5;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 6px 18px rgba(38, 55, 72, 0.08);
+}
+
+.feature-card__title {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  color: #2f3a45;
+}
+
+.feature-card__text {
+  color: #4f5560;
+}
+
+/*
+  block: guide
+  利用フロー
+*/
+.guide {
+  padding: 72px 24px;
+  background-color: #f7f7f5;
+}
+
+.guide__inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.guide__title {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: #2f3a45;
+}
+
+.guide__list {
+  display: grid;
+  gap: 16px;
+}
+
+.guide__item {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px 24px;
+  border: 1px solid #e1e5ea;
+}
+
+.guide__item-title {
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+  color: #2f3a45;
+}
+
+.guide__item-text {
+  color: #4f5560;
+}
+
+/*
+  block: info
+  補足情報
+*/
+.info {
+  padding: 72px 24px 88px;
+  background-color: #ffffff;
+}
+
+.info__inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.info__content {
+  background-color: #f7f7f5;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 6px 18px rgba(38, 55, 72, 0.08);
+}
+
+.info__title {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  color: #2f3a45;
+}
+
+.info__text {
+  color: #4f5560;
+}
+
+/*
+  block: contact
+  問い合わせ
+*/
+.contact {
+  padding: 64px 24px 88px;
+  background-color: #f0f2f4;
+}
+
+.contact__inner {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.contact__title {
+  font-size: 1.6rem;
+  margin-bottom: 16px;
+  color: #2f3a45;
+}
+
+.contact__text {
+  color: #4f5560;
+  margin-bottom: 16px;
+}
+
+.contact__detail {
+  color: #5a646e;
+  margin-bottom: 6px;
+}
+
+/*
+  block: footer
+  フッター
+*/
+.footer {
+  padding: 32px 24px 56px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.footer__inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.footer__text {
+  color: #6a6a6a;
+  font-size: 0.9rem;
+}
+
+/*
+  block: motion
+  スクロール表示アニメーション（JSで modifier を付与）
+*/
+.motion {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.motion--slide {
+  transform: translateY(32px);
+}
+
+.motion--visible {
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>地域連携プラットフォーム しずくポータル</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!--
+    block: page
+    サイト全体の背景とレイアウトを管理する。
+  -->
+  <div class="page">
+    <!--
+      block: hero
+      サービスの概要を伝えるファーストビュー。
+    -->
+    <header class="hero">
+      <div class="hero__background js-parallax" data-speed="0.25"></div>
+      <div class="hero__content">
+        <p class="hero__label">地域サービス紹介</p>
+        <h1 class="hero__title">地域連携プラットフォーム しずくポータル</h1>
+        <p class="hero__text">
+          行政・事業者・住民の情報を一つにまとめ、暮らしに必要な手続きを迷わず進められるよう支援します。
+        </p>
+      </div>
+    </header>
+
+    <!--
+      block: overview
+      サービスの役割を説明するセクション。
+    -->
+    <section class="overview">
+      <div class="overview__inner">
+        <h2 class="overview__title">サービスの全体像</h2>
+        <p class="overview__text">
+          しずくポータルは、各種申請の入口を整理し、必要な情報に素早く到達できる導線を提供します。
+          スクロールに合わせて背景が穏やかに動くことで、情報量の多いページでも視線の流れを自然に誘導します。
+        </p>
+      </div>
+    </section>
+
+    <!--
+      block: service
+      パララックスを使った情報整理の実例。
+    -->
+    <section class="service">
+      <div class="service__background js-parallax" data-speed="0.18"></div>
+      <div class="service__inner">
+        <div class="service__content">
+          <h2 class="service__title">主要機能</h2>
+          <p class="service__text">
+            情報の分類と優先度を明確にし、地域の方が迷わず必要なサービスにアクセスできる構成です。
+          </p>
+          <ul class="service__list">
+            <li class="service__item">
+              <h3 class="service__item-title">手続きナビゲーション</h3>
+              <p class="service__item-text">
+                申請手順をステップで整理し、初めての方でも安心して進められます。
+              </p>
+            </li>
+            <li class="service__item">
+              <h3 class="service__item-title">暮らしの通知</h3>
+              <p class="service__item-text">
+                ごみ収集日や防災情報など、地域に必要な情報をタイムリーに共有します。
+              </p>
+            </li>
+            <li class="service__item">
+              <h3 class="service__item-title">事業者向け手続き</h3>
+              <p class="service__item-text">
+                地域事業者向けの申請・申告を一箇所で管理し、業務負担を軽減します。
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="service__visual js-parallax" data-speed="0.32">
+          <p class="service__visual-label">画面イメージ</p>
+        </div>
+      </div>
+    </section>
+
+    <!--
+      block: benefit
+      導入効果を整理して伝える。
+    -->
+    <section class="benefit">
+      <div class="benefit__inner">
+        <h2 class="benefit__title">導入効果</h2>
+        <div class="benefit__cards">
+          <article class="benefit-card js-parallax" data-speed="0.12">
+            <h3 class="benefit-card__title">問い合わせ削減</h3>
+            <p class="benefit-card__text">
+              手続き情報を整理することで、窓口の問い合わせを平均20%削減した事例があります。
+            </p>
+          </article>
+          <article class="benefit-card js-parallax" data-speed="0.2">
+            <h3 class="benefit-card__title">情報更新の一元化</h3>
+            <p class="benefit-card__text">
+              部署ごとの更新を統合し、住民への周知漏れを防止します。
+            </p>
+          </article>
+          <article class="benefit-card js-parallax" data-speed="0.16">
+            <h3 class="benefit-card__title">利便性の向上</h3>
+            <p class="benefit-card__text">
+              スマートフォンからも快適に操作できるため、利用率の向上につながります。
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!--
+      block: flow
+      導入までの流れを説明する。
+    -->
+    <section class="flow">
+      <div class="flow__inner">
+        <h2 class="flow__title">導入までの流れ</h2>
+        <ol class="flow__list">
+          <li class="flow__item">
+            <h3 class="flow__item-title">ヒアリング</h3>
+            <p class="flow__item-text">現状の課題や業務フローを整理し、必要な情報を洗い出します。</p>
+          </li>
+          <li class="flow__item">
+            <h3 class="flow__item-title">設計・構築</h3>
+            <p class="flow__item-text">利用者の導線を意識した情報設計と画面構成を行います。</p>
+          </li>
+          <li class="flow__item">
+            <h3 class="flow__item-title">運用開始</h3>
+            <p class="flow__item-text">運用マニュアルを整備し、更新体制をサポートします。</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!--
+      block: contact
+      問い合わせ導線。
+    -->
+    <section class="contact">
+      <div class="contact__inner">
+        <h2 class="contact__title">お問い合わせ</h2>
+        <p class="contact__text">
+          サービス導入に関するご相談は、専用フォームまたはお電話で承ります。
+        </p>
+        <div class="contact__details">
+          <p class="contact__detail">電話：03-1234-5678（平日 9:00-17:30）</p>
+          <p class="contact__detail">メール：support@shizuku-portal.jp</p>
+        </div>
+      </div>
+    </section>
+
+    <!--
+      block: footer
+      フッター情報。
+    -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <p class="footer__text">© 2024 しずくポータル運営事務局</p>
+      </div>
+    </footer>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>

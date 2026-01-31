@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>オンライン相談窓口 まちサポート</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!--
+    block: page
+    全体の背景と余白を管理する。
+  -->
+  <div class="page">
+    <!--
+      block: header
+      サービスの概要を伝えるヘッダー。
+    -->
+    <header class="header">
+      <div class="header__inner">
+        <p class="header__label">暮らしの相談サービス</p>
+        <h1 class="header__title">オンライン相談窓口 まちサポート</h1>
+        <p class="header__text">
+          生活支援や子育て、介護などの相談をオンラインで受け付ける窓口です。安心して話せる環境を整えます。
+        </p>
+      </div>
+    </header>
+
+    <!--
+      block: intro
+      説明文をまとめる導入セクション。
+    -->
+    <section class="intro">
+      <div class="intro__inner">
+        <h2 class="intro__title">安心して相談できる仕組み</h2>
+        <p class="intro__text">
+          スクロールに合わせて要素を控えめに表示し、情報が自然に読めるように設計しています。
+          実案件を想定し、トーンや余白を整えた構成にしています。
+        </p>
+      </div>
+    </section>
+
+    <!--
+      block: feature
+      サービスの特徴を説明する。
+    -->
+    <section class="feature">
+      <div class="feature__inner">
+        <div class="feature__header">
+          <h2 class="feature__title">主な特徴</h2>
+          <p class="feature__text">利用者の不安を軽減し、相談しやすい導線を用意しています。</p>
+        </div>
+        <div class="feature__list">
+          <article class="feature-card motion motion--fade js-reveal">
+            <h3 class="feature-card__title">専門スタッフによる対応</h3>
+            <p class="feature-card__text">
+              分野ごとの担当者が状況を整理し、必要な支援窓口へつなぎます。
+            </p>
+          </article>
+          <article class="feature-card motion motion--slide js-reveal">
+            <h3 class="feature-card__title">予約制で安心</h3>
+            <p class="feature-card__text">
+              相談内容に合わせて時間を確保し、落ち着いて話せる環境を提供します。
+            </p>
+          </article>
+          <article class="feature-card motion motion--fade js-reveal">
+            <h3 class="feature-card__title">相談記録の共有</h3>
+            <p class="feature-card__text">
+              次回の相談時に経緯を引き継げるため、スムーズに支援を継続できます。
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!--
+      block: guide
+      利用の流れを説明する。
+    -->
+    <section class="guide">
+      <div class="guide__inner">
+        <h2 class="guide__title">ご利用の流れ</h2>
+        <ol class="guide__list">
+          <li class="guide__item motion motion--fade js-reveal">
+            <h3 class="guide__item-title">予約フォームに入力</h3>
+            <p class="guide__item-text">
+              相談内容と希望日時を入力し、担当者が確認できるようにします。
+            </p>
+          </li>
+          <li class="guide__item motion motion--slide js-reveal">
+            <h3 class="guide__item-title">担当者からご連絡</h3>
+            <p class="guide__item-text">
+              日時調整と事前ヒアリングを行い、相談内容を整理します。
+            </p>
+          </li>
+          <li class="guide__item motion motion--fade js-reveal">
+            <h3 class="guide__item-title">オンライン相談</h3>
+            <p class="guide__item-text">
+              相談後に必要な手続きや次のアクションを案内します。
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!--
+      block: info
+      補足情報をまとめる。
+    -->
+    <section class="info">
+      <div class="info__inner">
+        <div class="info__content motion motion--fade js-reveal">
+          <h2 class="info__title">よくあるご質問</h2>
+          <p class="info__text">
+            相談内容は担当スタッフのみが確認し、外部に共有されることはありません。
+            ご相談前に匿名での質問も可能です。
+          </p>
+        </div>
+        <div class="info__content motion motion--slide js-reveal">
+          <h2 class="info__title">対応時間</h2>
+          <p class="info__text">
+            平日9:00〜18:00に対応しています。緊急時は地域の緊急窓口をご案内します。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!--
+      block: contact
+      問い合わせ情報を整理する。
+    -->
+    <section class="contact">
+      <div class="contact__inner">
+        <h2 class="contact__title">お問い合わせ</h2>
+        <p class="contact__text">
+          導入を検討中の自治体・団体の方は、専用フォームまたはお電話でご相談ください。
+        </p>
+        <p class="contact__detail">電話：03-4321-9876（平日 9:00-18:00）</p>
+        <p class="contact__detail">メール：support@machisupport.jp</p>
+      </div>
+    </section>
+
+    <!--
+      block: footer
+      フッター
+    -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <p class="footer__text">© 2024 まちサポート運営事務局</p>
+      </div>
+    </footer>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>
