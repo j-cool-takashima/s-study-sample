@@ -1,11 +1,11 @@
-// 画面に入った要素へ BEM Modifier を追加する
-const observeTargets = document.querySelectorAll('.js-observe');
+// スクロールで表示する要素を取得
+const revealTargets = document.querySelectorAll('.js-reveal');
 
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('motion-card--visible');
+        entry.target.classList.add('motion--visible');
         observer.unobserve(entry.target);
       }
     });
@@ -15,6 +15,6 @@ const observer = new IntersectionObserver(
   }
 );
 
-observeTargets.forEach((target) => {
+revealTargets.forEach((target) => {
   observer.observe(target);
 });

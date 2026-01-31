@@ -13,8 +13,16 @@ body,
 h1,
 h2,
 h3,
-p {
+p,
+ul,
+ol {
   margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
 }
 
 body {
@@ -31,7 +39,7 @@ img {
 
 /*
   block: page
-  ページ全体の余白管理
+  サイト全体の余白管理
 */
 .page {
   overflow-x: hidden;
@@ -39,7 +47,7 @@ img {
 
 /*
   block: hero
-  学習用サンプルのヘッダー
+  ファーストビュー
 */
 .hero {
   position: relative;
@@ -47,15 +55,15 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 80px 24px;
+  padding: 96px 24px;
   text-align: center;
-  background-color: #f0f2f4;
+  background-color: #eef2f5;
 }
 
 .hero__background {
   position: absolute;
   inset: 0;
-  background: linear-gradient(120deg, #dfe6ed 0%, #f7f7f5 100%);
+  background: linear-gradient(140deg, #d7e4ee 0%, #f7f7f5 100%);
   z-index: 0;
   transform: translateY(0);
 }
@@ -63,7 +71,7 @@ img {
 .hero__content {
   position: relative;
   z-index: 1;
-  max-width: 720px;
+  max-width: 760px;
 }
 
 .hero__label {
@@ -74,7 +82,7 @@ img {
 }
 
 .hero__title {
-  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-size: clamp(1.9rem, 4vw, 2.8rem);
   margin-bottom: 16px;
 }
 
@@ -84,72 +92,239 @@ img {
 }
 
 /*
-  block: section
-  説明文をまとめる情報整理型レイアウト
+  block: overview
+  サービスの説明をまとめる
 */
-.section {
+.overview {
   padding: 72px 24px;
   background-color: #ffffff;
 }
 
-.section__inner {
-  max-width: 880px;
+.overview__inner {
+  max-width: 920px;
   margin: 0 auto;
 }
 
-.section__title {
+.overview__title {
   font-size: 1.6rem;
   margin-bottom: 16px;
   color: #2f3a45;
 }
 
-.section__text {
+.overview__text {
   color: #4f5560;
 }
 
 /*
-  block: feature
-  パララックスで動くカードの一覧
+  block: service
+  機能説明セクション
 */
-.feature {
-  padding: 72px 24px 96px;
+.service {
+  position: relative;
+  padding: 96px 24px;
   background-color: #f7f7f5;
+  overflow: hidden;
 }
 
-.feature__inner {
-  max-width: 960px;
+.service__background {
+  position: absolute;
+  inset: -20% 0;
+  background: linear-gradient(180deg, rgba(205, 222, 238, 0.6) 0%, rgba(247, 247, 245, 0.2) 100%);
+  z-index: 0;
+  transform: translateY(0);
+}
+
+.service__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1040px;
   margin: 0 auto;
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  align-items: center;
+}
+
+.service__content {
+  display: grid;
+  gap: 24px;
+}
+
+.service__title {
+  font-size: 1.6rem;
+  color: #2f3a45;
+}
+
+.service__text {
+  color: #4f5560;
+}
+
+.service__list {
+  display: grid;
+  gap: 16px;
+}
+
+.service__item {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px 24px;
+  box-shadow: 0 6px 16px rgba(38, 55, 72, 0.08);
+}
+
+.service__item-title {
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+  color: #2f3a45;
+}
+
+.service__item-text {
+  color: #4f5560;
+}
+
+.service__visual {
+  min-height: 280px;
+  border-radius: 16px;
+  background: linear-gradient(160deg, #ffffff 0%, #e8eef3 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6c7885;
+  font-size: 0.95rem;
+  border: 1px solid #d8dde2;
+  box-shadow: 0 12px 24px rgba(38, 55, 72, 0.08);
+  transform: translateY(0);
+}
+
+.service__visual-label {
+  padding: 12px 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 999px;
+}
+
+/*
+  block: benefit
+  導入効果のカード
+*/
+.benefit {
+  padding: 80px 24px;
+  background-color: #ffffff;
+}
+
+.benefit__inner {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.benefit__title {
+  font-size: 1.6rem;
+  margin-bottom: 24px;
+  color: #2f3a45;
+}
+
+.benefit__cards {
   display: grid;
   gap: 24px;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
-.feature__item {
-  background-color: #ffffff;
-  padding: 24px;
+.benefit-card {
+  background-color: #f7f7f5;
   border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(38, 55, 72, 0.08);
+  padding: 24px;
+  box-shadow: 0 8px 20px rgba(38, 55, 72, 0.08);
   transform: translateY(0);
-  transition: transform 0.2s ease-out;
 }
 
-.feature__title {
+.benefit-card__title {
   font-size: 1.1rem;
   margin-bottom: 12px;
   color: #2f3a45;
 }
 
-.feature__text {
+.benefit-card__text {
   color: #4f5560;
 }
 
 /*
+  block: flow
+  導入フロー
+*/
+.flow {
+  padding: 80px 24px 96px;
+  background-color: #f0f2f4;
+}
+
+.flow__inner {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.flow__title {
+  font-size: 1.6rem;
+  margin-bottom: 24px;
+  color: #2f3a45;
+}
+
+.flow__list {
+  display: grid;
+  gap: 20px;
+}
+
+.flow__item {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px 24px;
+  border: 1px solid #e1e5ea;
+}
+
+.flow__item-title {
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+  color: #2f3a45;
+}
+
+.flow__item-text {
+  color: #4f5560;
+}
+
+/*
+  block: contact
+  お問い合わせ
+*/
+.contact {
+  padding: 72px 24px 96px;
+  background-color: #ffffff;
+}
+
+.contact__inner {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.contact__title {
+  font-size: 1.6rem;
+  margin-bottom: 16px;
+  color: #2f3a45;
+}
+
+.contact__text {
+  color: #4f5560;
+  margin-bottom: 16px;
+}
+
+.contact__details {
+  display: grid;
+  gap: 8px;
+  color: #5a646e;
+}
+
+/*
   block: footer
-  サンプルページのフッター
+  フッター
 */
 .footer {
-  padding: 40px 24px 64px;
-  background-color: #ffffff;
+  padding: 32px 24px 56px;
+  background-color: #f7f7f5;
   text-align: center;
 }
 
@@ -160,5 +335,5 @@ img {
 
 .footer__text {
   color: #6a6a6a;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
