@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>学習用アニメーションサンプル</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!--
+    block: page
+    ページ全体の余白と背景色を管理する。
+  -->
+  <div class="page">
+    <!--
+      block: header
+      サンプルの概要を伝えるヘッダー。
+    -->
+    <header class="header">
+      <div class="header__inner">
+        <p class="header__label">勉強用サンプル</p>
+        <h1 class="header__title">学習用アニメーションサンプル</h1>
+        <p class="header__text">
+          スクロールに応じて要素が自然にフェードインする動きを確認できます。
+        </p>
+      </div>
+    </header>
+
+    <!--
+      block: intro
+      学習内容の説明をまとめる導入セクション。
+    -->
+    <section class="intro">
+      <div class="intro__inner">
+        <h2 class="intro__title">基本的な動きの確認</h2>
+        <p class="intro__text">
+          IntersectionObserver を使い、画面内に入った要素に BEM の Modifier を付与して
+          アニメーションを開始します。JavaScript用クラスは js- プレフィックスで分離しています。
+        </p>
+      </div>
+    </section>
+
+    <!--
+      block: motion-list
+      アニメーションの実例を一覧で見せる。
+    -->
+    <section class="motion-list">
+      <div class="motion-list__inner">
+        <article class="motion-card js-observe">
+          <h3 class="motion-card__title">フェードイン</h3>
+          <p class="motion-card__text">
+            ふわっと透明度が上がる、よくある自然な出現アニメーションです。
+          </p>
+        </article>
+        <article class="motion-card js-observe">
+          <h3 class="motion-card__title">スライドイン</h3>
+          <p class="motion-card__text">
+            少し下から上に移動しながら表示されることで、視線の流れを作ります。
+          </p>
+        </article>
+        <article class="motion-card js-observe">
+          <h3 class="motion-card__title">段階的な表示</h3>
+          <p class="motion-card__text">
+            要素ごとに表示タイミングをずらし、情報を整理して見せるのに役立ちます。
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!--
+      block: note
+      学習用サンプルであることを明示する。
+    -->
+    <section class="note">
+      <div class="note__inner">
+        <h2 class="note__title">このサンプルの目的</h2>
+        <p class="note__text">
+          日本のWebサイトでよく使われる控えめな動きを学習できるように、派手すぎない速度と
+          余白を意識して構成しています。
+        </p>
+      </div>
+    </section>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>

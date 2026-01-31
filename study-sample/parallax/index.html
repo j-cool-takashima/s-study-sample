@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>学習用パララックスサンプル</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!--
+    block: page
+    ページ全体の基本レイアウトを担う。
+  -->
+  <div class="page">
+    <!--
+      block: hero
+      学習用サンプルであることを伝えるファーストビュー。
+    -->
+    <header class="hero">
+      <div class="hero__background js-parallax" data-speed="0.3"></div>
+      <div class="hero__content">
+        <p class="hero__label">勉強用サンプル</p>
+        <h1 class="hero__title">学習用パララックスサンプル</h1>
+        <p class="hero__text">
+          スクロール量に応じて背景や要素がゆるやかにずれる挙動を確認できます。
+        </p>
+      </div>
+    </header>
+
+    <!--
+      block: section
+      情報整理型の見出し＋説明文レイアウト。
+    -->
+    <section class="section">
+      <div class="section__inner">
+        <h2 class="section__title">パララックスの考え方</h2>
+        <p class="section__text">
+          背景とコンテンツの移動速度を変えることで、奥行き感を演出します。ここではJavaScriptで
+          data-speed 属性を読み取り、スクロール量に合わせて translateY を調整しています。
+        </p>
+      </div>
+    </section>
+
+    <!--
+      block: feature
+      パララックスで動くカード要素。
+    -->
+    <section class="feature">
+      <div class="feature__inner">
+        <div class="feature__item js-parallax" data-speed="0.15">
+          <h3 class="feature__title">背景のゆっくりした動き</h3>
+          <p class="feature__text">
+            背景はコンテンツよりゆっくり動かすことで自然な奥行きを出します。
+          </p>
+        </div>
+        <div class="feature__item js-parallax" data-speed="0.25">
+          <h3 class="feature__title">要素ごとの移動差</h3>
+          <p class="feature__text">
+            複数の要素に異なる speed を設定して、視差の違いを比較できます。
+          </p>
+        </div>
+        <div class="feature__item js-parallax" data-speed="0.2">
+          <h3 class="feature__title">構造と命名の学習</h3>
+          <p class="feature__text">
+            BEMのBlockごとに役割を分け、後から要素を増やしやすい構成にしています。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!--
+      block: footer
+      サンプル用途の締めくくり。
+    -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <p class="footer__text">このページは学習用のパララックス実装サンプルです。</p>
+      </div>
+    </footer>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>

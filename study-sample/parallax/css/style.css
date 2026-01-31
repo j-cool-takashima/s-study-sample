@@ -1,0 +1,164 @@
+@charset "UTF-8";
+
+/*
+  リセットCSS（最小限）
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+body {
+  font-family: "Hiragino Sans", "Noto Sans JP", "Yu Gothic", "Meiryo", sans-serif;
+  color: #2b2b2b;
+  background-color: #f7f7f5;
+  line-height: 1.7;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*
+  block: page
+  ページ全体の余白管理
+*/
+.page {
+  overflow-x: hidden;
+}
+
+/*
+  block: hero
+  学習用サンプルのヘッダー
+*/
+.hero {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 24px;
+  text-align: center;
+  background-color: #f0f2f4;
+}
+
+.hero__background {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, #dfe6ed 0%, #f7f7f5 100%);
+  z-index: 0;
+  transform: translateY(0);
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+}
+
+.hero__label {
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  color: #5f6b7a;
+  margin-bottom: 12px;
+}
+
+.hero__title {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  margin-bottom: 16px;
+}
+
+.hero__text {
+  font-size: 1rem;
+  color: #4b4b4b;
+}
+
+/*
+  block: section
+  説明文をまとめる情報整理型レイアウト
+*/
+.section {
+  padding: 72px 24px;
+  background-color: #ffffff;
+}
+
+.section__inner {
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.section__title {
+  font-size: 1.6rem;
+  margin-bottom: 16px;
+  color: #2f3a45;
+}
+
+.section__text {
+  color: #4f5560;
+}
+
+/*
+  block: feature
+  パララックスで動くカードの一覧
+*/
+.feature {
+  padding: 72px 24px 96px;
+  background-color: #f7f7f5;
+}
+
+.feature__inner {
+  max-width: 960px;
+  margin: 0 auto;
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.feature__item {
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(38, 55, 72, 0.08);
+  transform: translateY(0);
+  transition: transform 0.2s ease-out;
+}
+
+.feature__title {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  color: #2f3a45;
+}
+
+.feature__text {
+  color: #4f5560;
+}
+
+/*
+  block: footer
+  サンプルページのフッター
+*/
+.footer {
+  padding: 40px 24px 64px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.footer__inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.footer__text {
+  color: #6a6a6a;
+  font-size: 0.95rem;
+}
