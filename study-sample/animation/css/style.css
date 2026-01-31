@@ -1,0 +1,157 @@
+@charset "UTF-8";
+
+/*
+  リセットCSS（最小限）
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+body {
+  font-family: "Hiragino Sans", "Noto Sans JP", "Yu Gothic", "Meiryo", sans-serif;
+  color: #2b2b2b;
+  background-color: #f7f7f5;
+  line-height: 1.7;
+}
+
+/*
+  block: page
+  全体の背景と余白を管理
+*/
+.page {
+  overflow-x: hidden;
+}
+
+/*
+  block: header
+  ページの導入部分
+*/
+.header {
+  padding: 80px 24px 64px;
+  background-color: #ffffff;
+}
+
+.header__inner {
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.header__label {
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  color: #5f6b7a;
+  margin-bottom: 12px;
+}
+
+.header__title {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  margin-bottom: 16px;
+}
+
+.header__text {
+  color: #4f5560;
+}
+
+/*
+  block: intro
+  学習内容の説明
+*/
+.intro {
+  padding: 64px 24px;
+  background-color: #f0f2f4;
+}
+
+.intro__inner {
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.intro__title {
+  font-size: 1.6rem;
+  margin-bottom: 16px;
+  color: #2f3a45;
+}
+
+.intro__text {
+  color: #4f5560;
+}
+
+/*
+  block: motion-list
+  アニメーションの一覧
+*/
+.motion-list {
+  padding: 72px 24px;
+  background-color: #ffffff;
+}
+
+.motion-list__inner {
+  max-width: 960px;
+  margin: 0 auto;
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+/*
+  block: motion-card
+  アニメーション対象カード
+*/
+.motion-card {
+  background-color: #f7f7f5;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 6px 18px rgba(38, 55, 72, 0.08);
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.motion-card--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.motion-card__title {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  color: #2f3a45;
+}
+
+.motion-card__text {
+  color: #4f5560;
+}
+
+/*
+  block: note
+  サンプルの目的説明
+*/
+.note {
+  padding: 64px 24px 96px;
+  background-color: #f0f2f4;
+}
+
+.note__inner {
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.note__title {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  color: #2f3a45;
+}
+
+.note__text {
+  color: #4f5560;
+}
